@@ -107,6 +107,7 @@
                     <div class="stat-number" data-count="50000">0</div>
                     <div class="stat-label">Patients Treated</div>
                 </div>
+<<<<<<< HEAD
                 <div class="trust-divider"></div>
                 <div class="trust-stat" data-animate="fade-up" data-delay="100">
                     <div class="stat-number" data-count="150">0</div>
@@ -128,6 +129,31 @@
                 <div class="badge-item"><i class="fa-solid fa-award"></i> ISO 9001 Certified</div>
                 <div class="badge-item"><i class="fa-solid fa-shield-halved"></i> HIPAA Compliant</div>
                 <div class="badge-item"><i class="fa-solid fa-user-doctor"></i> Board Certified MDs</div>
+=======
+
+                <!-- Results Panel -->
+                <div class="results-panel">
+                    <h3>Possible Conditions</h3>
+                    <div id="resultsContainer" class="results-container">
+                        <div class="no-results">
+                            <span class="icon-clipboard-list"></span>
+                            <p>Select your symptoms and click "Analyze Symptoms" to see possible conditions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor Suggestions Area -->
+            <div class="doctor-suggestions-section">
+                        <h3><span class="icon-stethoscope"></span> Doctor Recommendations</h3>
+                <p>Verified suggestions from healthcare professionals</p>
+                <div id="doctorSuggestions" class="suggestions-grid">
+                        <div class="no-suggestions">
+                            <span class="icon-stethoscope"></span>
+                            <p>Doctor recommendations will appear here after analysis</p>
+                        </div>
+                </div>
+>>>>>>> baca8581eac7f674981e281acb11e8083842db8d
             </div>
         </div>
     </section>
@@ -140,6 +166,7 @@
                 <h2>Comprehensive Medical Services</h2>
                 <p>From routine check-ups to complex procedures, we deliver personalized care across every medical discipline.</p>
             </div>
+<<<<<<< HEAD
             <div class="services-grid">
                 <div class="service-card" data-animate="fade-up" id="serviceCardiology">
                     <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
@@ -176,15 +203,331 @@
                     <h3>Oncology</h3>
                     <p>Multidisciplinary cancer care with precision medicine, immunotherapy, and personalized treatment protocols.</p>
                     <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+=======
+
+            <div class="portal-grid">
+                <!-- Login Form -->
+                <div class="doctor-login">
+                    <h3>Doctor Authentication</h3>
+                    <form id="doctorLoginForm">
+                        <div class="form-group">
+                            <label for="doctorId">Doctor ID</label>
+                            <input type="text" id="doctorId" placeholder="Enter your Doctor ID" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="doctorPassword">Password</label>
+                            <input type="password" id="doctorPassword" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span class="icon-sign-in-alt"></span> Login
+                        </button>
+                        <p class="form-note">For demo, use ID: DOC001 and Password: doctor123</p>
+                    </form>
+                </div>
+
+                <!-- Doctor Dashboard (Hidden by default) -->
+                <div id="doctorDashboard" class="doctor-dashboard hidden">
+                    <div class="dashboard-header">
+                        <h3><span class="icon-user-md"></span> Dr. <span id="doctorName">Professional</span></h3>
+                        <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+                    </div>
+                    
+                    <div class="dashboard-tabs">
+                        <button class="tab-btn active" data-tab="pending">Pending Cases</button>
+                        <button class="tab-btn" data-tab="resolved">Resolved Cases</button>
+                        <button class="tab-btn" data-tab="addDiagnosis">Add Diagnosis</button>
+                    </div>
+
+                    <div class="dashboard-content">
+                        <!-- Pending Cases Tab -->
+                        <div id="pendingCases" class="tab-content active">
+                            <div class="cases-list">
+                                <div class="case-card">
+                                    <div class="case-header">
+                                        <span class="case-id">#CASE-001</span>
+                                        <span class="case-date">2026-04-24</span>
+                                    </div>
+                                    <div class="case-symptoms">
+                                        <strong>Symptoms:</strong> Fever, Cough, Shortness of Breath
+                                    </div>
+                                    <div class="case-ai-result">
+                                        <strong>AI Suggestion:</strong> Possible Pneumonia, Bronchitis
+                                    </div>
+                                    <div class="case-actions">
+                                        <button class="btn btn-small btn-primary" onclick="openDiagnosisForm('CASE-001')">
+                                            <span class="icon-stethoscope"></span> Provide Diagnosis
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="case-card">
+                                    <div class="case-header">
+                                        <span class="case-id">#CASE-002</span>
+                                        <span class="case-date">2026-04-23</span>
+                                    </div>
+                                    <div class="case-symptoms">
+                                        <strong>Symptoms:</strong> Headache, Fatigue, Nausea
+                                    </div>
+                                    <div class="case-ai-result">
+                                        <strong>AI Suggestion:</strong> Possible Migraine, Tension Headache
+                                    </div>
+                                    <div class="case-actions">
+                                        <button class="btn btn-small btn-primary" onclick="openDiagnosisForm('CASE-002')">
+                                            <span class="icon-stethoscope"></span> Provide Diagnosis
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Resolved Cases Tab -->
+                        <div id="resolvedCases" class="tab-content">
+                            <div class="cases-list">
+                                <div class="case-card resolved">
+                                    <div class="case-header">
+                                        <span class="case-id">#CASE-000</span>
+                                        <span class="case-date">2026-04-22</span>
+                                        <span class="case-status resolved">Resolved</span>
+                                    </div>
+                                    <div class="case-symptoms">
+                                        <strong>Symptoms:</strong> Fever, Sore Throat, Swollen Lymph Nodes
+                                    </div>
+                                    <div class="case-doctor-diagnosis">
+                                        <strong>Doctor Diagnosis:</strong> Strep Throat (Streptococcal Pharyngitis)
+                                    </div>
+                                    <div class="case-treatment">
+                                        <strong>Treatment:</strong> Antibiotics (Amoxicillin 500mg 3x daily for 10 days)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add Diagnosis Tab -->
+                        <div id="addDiagnosis" class="tab-content">
+                            <form id="diagnosisForm">
+                                <div class="form-group">
+                                    <label for="caseIdInput">Case ID</label>
+                                    <input type="text" id="caseIdInput" placeholder="Enter case ID" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="diagnosisCondition">Diagnosis Condition</label>
+                                    <input type="text" id="diagnosisCondition" placeholder="Enter diagnosis" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="diagnosisTreatment">Recommended Treatment</label>
+                                    <textarea id="diagnosisTreatment" rows="4" placeholder="Enter treatment recommendations" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="diagnosisNotes">Additional Notes</label>
+                                    <textarea id="diagnosisNotes" rows="3" placeholder="Enter any additional notes for the patient"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="severityLevel">Severity Level</label>
+                                    <select id="severityLevel">
+                                        <option value="low">Low - Manageable at home</option>
+                                        <option value="medium">Medium - Requires consultation</option>
+                                        <option value="high">High - Seek immediate care</option>
+                                        <option value="critical">Critical - Emergency care required</option>
+                                    </select>
+                                </div>
+                            <button type="submit" class="btn btn-primary">
+                                <span class="icon-save"></span> Submit Diagnosis
+                            </button>
+                            </form>
+                        </div>
+                    </div>
+>>>>>>> baca8581eac7f674981e281acb11e8083842db8d
                 </div>
             </div>
         </div>
     </section>
 
+<<<<<<< HEAD
     <!-- About / Why Choose Us Section -->
+=======
+    <!-- Messages Section -->
+    <section id="messages" class="messages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Communication Center</h2>
+                <p>Secure messaging between doctors and patients</p>
+            </div>
+
+            <div class="messages-tabs">
+                        <button class="msg-tab-btn active" data-msgtab="doctor-patient">
+                            <span class="icon-user-injured"></span> Doctor-Patient
+                        </button>
+                        <button class="msg-tab-btn" data-msgtab="doctor-doctor">
+                            <span class="icon-user-md"></span> Doctor Forum
+                        </button>
+            </div>
+
+            <div class="messages-container">
+                <!-- Doctor-Patient Messaging -->
+                <div id="doctorPatientMsgs" class="msg-tab-content active">
+                    <div class="msg-sidebar">
+                        <h4>Conversations</h4>
+                        <div class="conversation-list">
+                            <div class="conversation-item active" data-conversation="patient1">
+                                <div class="conv-avatar">JD</div>
+                                <div class="conv-info">
+                                    <span class="conv-name">John Doe</span>
+                                    <span class="conv-preview">Thank you doctor...</span>
+                                </div>
+                                <span class="conv-time">10:30 AM</span>
+                            </div>
+                            <div class="conversation-item" data-conversation="patient2">
+                                <div class="conv-avatar">AS</div>
+                                <div class="conv-info">
+                                    <span class="conv-name">Alice Smith</span>
+                                    <span class="conv-preview">When should I take...</span>
+                                </div>
+                                <span class="conv-time">Yesterday</span>
+                            </div>
+                            <div class="conversation-item" data-conversation="patient3">
+                                <div class="conv-avatar">RJ</div>
+                                <div class="conv-info">
+                                    <span class="conv-name">Robert Johnson</span>
+                                    <span class="conv-preview">Lab results received...</span>
+                                </div>
+                                <span class="conv-time">Apr 22</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="msg-chat-area">
+                        <div class="chat-header">
+                            <div class="chat-user-info">
+                                <div class="chat-avatar">JD</div>
+                                <div>
+                                    <h4>John Doe</h4>
+                                    <span class="chat-status">Patient • ID: PAT-001</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-small btn-secondary"><span class="icon-video"></span> Video Call</button>
+                        </div>
+                        <div class="chat-messages" id="patientChatMessages">
+                            <div class="message received">
+                                <div class="message-content">
+                                    <p>Good morning, Doctor. I wanted to follow up on my diagnosis from last week.</p>
+                                </div>
+                                <span class="message-time">10:15 AM</span>
+                            </div>
+                            <div class="message sent">
+                                <div class="message-content">
+                                    <p>Good morning, John. How are you feeling today? Have you noticed any improvement with the medication?</p>
+                                </div>
+                                <span class="message-time">10:20 AM</span>
+                            </div>
+                            <div class="message received">
+                                <div class="message-content">
+                                    <p>Yes, the fever has gone down but I still have a mild cough. Should I continue the same dosage?</p>
+                                </div>
+                                <span class="message-time">10:25 AM</span>
+                            </div>
+                            <div class="message sent">
+                                <div class="message-content">
+                                    <p>Yes, continue the current dosage for another 5 days. If symptoms persist, please schedule a follow-up appointment.</p>
+                                </div>
+                                <span class="message-time">10:30 AM</span>
+                            </div>
+                        </div>
+                        <div class="chat-input-area">
+                            <button class="attach-btn"><span class="icon-paperclip"></span></button>
+                            <input type="text" id="patientMessageInput" placeholder="Type your message...">
+                            <button class="send-btn" onclick="sendPatientMessage()">
+                                    <span class="icon-paper-plane"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor-Doctor Forum -->
+                <div id="doctorDoctorMsgs" class="msg-tab-content">
+                    <div class="forum-header">
+                        <h3><span class="icon-stethoscope"></span> Medical Professional Forum</h3>
+                        <p>Discuss cases, share insights, and collaborate with fellow doctors</p>
+                    </div>
+                    <div class="forum-categories">
+                        <button class="forum-cat active">All Topics</button>
+                        <button class="forum-cat">Case Discussions</button>
+                        <button class="forum-cat">Clinical Research</button>
+                        <button class="forum-cat">Treatment Protocols</button>
+                        <button class="forum-cat">Emergency Cases</button>
+                    </div>
+                    <div class="forum-posts">
+                        <div class="forum-post">
+                        <div class="post-author">
+                            <div class="post-avatar">
+                                <span class="icon-user-md"></span>
+                            </div>
+                            <div>
+                                <span class="author-name">Dr. Sarah Johnson</span>
+                                <span class="post-date">Apr 24, 2026 • 9:15 AM</span>
+                            </div>
+                        </div>
+                            <h4 class="post-title">Unusual Pneumonia Case - Need Second Opinion</h4>
+                            <p class="post-excerpt">Patient presents with atypical pneumonia symptoms not responding to standard treatment. Chest X-ray shows bilateral infiltrates...</p>
+                        <div class="post-stats">
+                            <span><span class="icon-comment"></span> 12 replies</span>
+                            <span><span class="icon-eye"></span> 34 views</span>
+                            <span class="tag urgent">Urgent</span>
+                        </div>
+                            <button class="btn btn-small btn-primary" onclick="openForumThread('post1')">View Discussion</button>
+                        </div>
+                        <div class="forum-post">
+                        <div class="post-author">
+                            <div class="post-avatar">
+                                <span class="icon-user-md"></span>
+                            </div>
+                            <div>
+                                <span class="author-name">Dr. Michael Chen</span>
+                                <span class="post-date">Apr 23, 2026 • 2:45 PM</span>
+                            </div>
+                        </div>
+                            <h4 class="post-title">New Diabetes Treatment Protocol</h4>
+                            <p class="post-excerpt">Recent studies show promising results with GLP-1 agonists for Type 2 diabetes management. Would like to discuss implementation...</p>
+                        <div class="post-stats">
+                            <span><span class="icon-comment"></span> 8 replies</span>
+                            <span><span class="icon-eye"></span> 56 views</span>
+                            <span class="tag">Research</span>
+                        </div>
+                            <button class="btn btn-small btn-primary" onclick="openForumThread('post2')">View Discussion</button>
+                        </div>
+                        <div class="forum-post">
+                        <div class="post-author">
+                            <div class="post-avatar">
+                                <span class="icon-user-md"></span>
+                            </div>
+                            <div>
+                                <span class="author-name">Dr. Emily Williams</span>
+                                <span class="post-date">Apr 22, 2026 • 11:30 AM</span>
+                            </div>
+                        </div>
+                            <h4 class="post-title">Pediatric Fever Management Guidelines</h4>
+                            <p class="post-excerpt">Updating our department's fever management protocol for children under 5. Looking for input from pediatric specialists...</p>
+                            <div class="post-stats">
+                                <span><i class="fas fa-comment"></i> 15 replies</span>
+                                <span><i class="fas fa-eye"></i> 78 views</span>
+                                <span class="tag">Protocol</span>
+                            </div>
+                            <button class="btn btn-small btn-primary" onclick="openForumThread('post3')">View Discussion</button>
+                        </div>
+                    </div>
+                    <div class="new-post-area">
+                        <button class="btn btn-primary" onclick="openNewPostForm()">
+                            <span class="icon-plus"></span> New Discussion
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+>>>>>>> baca8581eac7f674981e281acb11e8083842db8d
     <section id="about" class="about-section">
         <div class="container">
             <div class="about-grid">
+<<<<<<< HEAD
                 <div class="about-visual" data-animate="fade-right">
                     <div class="about-image-wrapper">
                         <img src="assets/about-hospital.png" alt="MultiverseCare modern hospital facility interior" class="about-image" id="aboutImage">
@@ -367,6 +710,28 @@
                     <span><i class="fa-solid fa-check"></i> Insurance accepted</span>
                     <span><i class="fa-solid fa-check"></i> Same-day appointments</span>
                 </div>
+=======
+                    <div class="about-card">
+                        <span class="icon-shield-alt"></span>
+                        <h3>Safe & Secure</h3>
+                        <p>Your health data is protected with enterprise-grade security and encryption.</p>
+                    </div>
+                    <div class="about-card">
+                        <span class="icon-user-md"></span>
+                        <h3>Doctor Verified</h3>
+                        <p>All AI suggestions are reviewed by licensed healthcare professionals.</p>
+                    </div>
+                    <div class="about-card">
+                        <span class="icon-clock"></span>
+                        <h3>24/7 Availability</h3>
+                        <p>Access health information anytime, anywhere without waiting.</p>
+                    </div>
+                    <div class="about-card">
+                        <span class="icon-hand-holding-medical"></span>
+                        <h3>Not a Replacement</h3>
+                        <p>We complement but never replace professional medical care.</p>
+                    </div>
+>>>>>>> baca8581eac7f674981e281acb11e8083842db8d
             </div>
         </div>
     </section>
@@ -408,6 +773,7 @@
                         <li><a href="#services">Oncology</a></li>
                     </ul>
                 </div>
+<<<<<<< HEAD
                 <div class="footer-contact-col">
                     <h4>Contact Us</h4>
                     <div class="contact-item">
@@ -426,6 +792,11 @@
                         <i class="fa-solid fa-clock"></i>
                         <span>Mon – Sat: 7AM – 9PM<br>Emergency: 24/7</span>
                     </div>
+=======
+                <div class="footer-section">
+                    <h4>Emergency</h4>
+                    <p class="emergency-note"><span class="icon-exclamation-circle"></span> For medical emergencies, call your local emergency services immediately.</p>
+>>>>>>> baca8581eac7f674981e281acb11e8083842db8d
                 </div>
             </div>
             <div class="footer-bottom">
