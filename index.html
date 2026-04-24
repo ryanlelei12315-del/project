@@ -205,7 +205,7 @@
                     <h3>Possible Conditions</h3>
                     <div id="resultsContainer" class="results-container">
                         <div class="no-results">
-                            <i class="fas fa-clipboard-list"></i>
+                            <span class="icon-clipboard-list"></span>
                             <p>Select your symptoms and click "Analyze Symptoms" to see possible conditions</p>
                         </div>
                     </div>
@@ -214,13 +214,13 @@
 
             <!-- Doctor Suggestions Area -->
             <div class="doctor-suggestions-section">
-                <h3><span>⚕</span> Doctor Recommendations</h3>
+                        <h3><span class="icon-stethoscope"></span> Doctor Recommendations</h3>
                 <p>Verified suggestions from healthcare professionals</p>
                 <div id="doctorSuggestions" class="suggestions-grid">
-                    <div class="no-suggestions">
-                        <i class="fas fa-stethoscope"></i>
-                        <p>Doctor recommendations will appear here after analysis</p>
-                    </div>
+                        <div class="no-suggestions">
+                            <span class="icon-stethoscope"></span>
+                            <p>Doctor recommendations will appear here after analysis</p>
+                        </div>
                 </div>
             </div>
         </div>
@@ -248,7 +248,7 @@
                             <input type="password" id="doctorPassword" placeholder="Enter your password" required>
                         </div>
                         <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-sign-in-alt"></i> Login
+                            <span class="icon-sign-in-alt"></span> Login
                         </button>
                         <p class="form-note">For demo, use ID: DOC001 and Password: doctor123</p>
                     </form>
@@ -257,7 +257,7 @@
                 <!-- Doctor Dashboard (Hidden by default) -->
                 <div id="doctorDashboard" class="doctor-dashboard hidden">
                     <div class="dashboard-header">
-                        <h3><i class="fas fa-user-md"></i> Dr. <span id="doctorName">Professional</span></h3>
+                        <h3><span class="icon-user-md"></span> Dr. <span id="doctorName">Professional</span></h3>
                         <button id="logoutBtn" class="btn btn-secondary">Logout</button>
                     </div>
                     
@@ -284,7 +284,7 @@
                                     </div>
                                     <div class="case-actions">
                                         <button class="btn btn-small btn-primary" onclick="openDiagnosisForm('CASE-001')">
-                                            <i class="fas fa-stethoscope"></i> Provide Diagnosis
+                                            <span class="icon-stethoscope"></span> Provide Diagnosis
                                         </button>
                                     </div>
                                 </div>
@@ -301,7 +301,7 @@
                                     </div>
                                     <div class="case-actions">
                                         <button class="btn btn-small btn-primary" onclick="openDiagnosisForm('CASE-002')">
-                                            <i class="fas fa-stethoscope"></i> Provide Diagnosis
+                                            <span class="icon-stethoscope"></span> Provide Diagnosis
                                         </button>
                                     </div>
                                 </div>
@@ -358,9 +358,9 @@
                                         <option value="critical">Critical - Emergency care required</option>
                                     </select>
                                 </div>
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fas fa-save"></i> Submit Diagnosis
-                                </button>
+                            <button type="submit" class="btn btn-primary">
+                                <span class="icon-save"></span> Submit Diagnosis
+                            </button>
                             </form>
                         </div>
                     </div>
@@ -378,12 +378,12 @@
             </div>
 
             <div class="messages-tabs">
-                <button class="msg-tab-btn active" data-msgtab="doctor-patient">
-                    <i class="fas fa-user-injured"></i> Doctor-Patient
-                </button>
-                <button class="msg-tab-btn" data-msgtab="doctor-doctor">
-                    <i class="fas fa-user-md"></i> Doctor Forum
-                </button>
+                        <button class="msg-tab-btn active" data-msgtab="doctor-patient">
+                            <span class="icon-user-injured"></span> Doctor-Patient
+                        </button>
+                        <button class="msg-tab-btn" data-msgtab="doctor-doctor">
+                            <span class="icon-user-md"></span> Doctor Forum
+                        </button>
             </div>
 
             <div class="messages-container">
@@ -427,7 +427,7 @@
                                     <span class="chat-status">Patient • ID: PAT-001</span>
                                 </div>
                             </div>
-                            <button class="btn btn-small btn-secondary"><i class="fas fa-video"></i> Video Call</button>
+                            <button class="btn btn-small btn-secondary"><span class="icon-video"></span> Video Call</button>
                         </div>
                         <div class="chat-messages" id="patientChatMessages">
                             <div class="message received">
@@ -456,10 +456,10 @@
                             </div>
                         </div>
                         <div class="chat-input-area">
-                            <button class="attach-btn"><i class="fas fa-paperclip"></i></button>
+                            <button class="attach-btn"><span class="icon-paperclip"></span></button>
                             <input type="text" id="patientMessageInput" placeholder="Type your message...">
                             <button class="send-btn" onclick="sendPatientMessage()">
-                                <i class="fas fa-paper-plane"></i>
+                                    <span class="icon-paper-plane"></span>
                             </button>
                         </div>
                     </div>
@@ -468,7 +468,7 @@
                 <!-- Doctor-Doctor Forum -->
                 <div id="doctorDoctorMsgs" class="msg-tab-content">
                     <div class="forum-header">
-                        <h3><i class="fas fa-stethoscope"></i> Medical Professional Forum</h3>
+                        <h3><span class="icon-stethoscope"></span> Medical Professional Forum</h3>
                         <p>Discuss cases, share insights, and collaborate with fellow doctors</p>
                     </div>
                     <div class="forum-categories">
@@ -480,53 +480,53 @@
                     </div>
                     <div class="forum-posts">
                         <div class="forum-post">
-                            <div class="post-author">
-                                <div class="post-avatar">
-                                    <i class="fas fa-user-md"></i>
-                                </div>
-                                <div>
-                                    <span class="author-name">Dr. Sarah Johnson</span>
-                                    <span class="post-date">Apr 24, 2026 • 9:15 AM</span>
-                                </div>
+                        <div class="post-author">
+                            <div class="post-avatar">
+                                <span class="icon-user-md"></span>
                             </div>
+                            <div>
+                                <span class="author-name">Dr. Sarah Johnson</span>
+                                <span class="post-date">Apr 24, 2026 • 9:15 AM</span>
+                            </div>
+                        </div>
                             <h4 class="post-title">Unusual Pneumonia Case - Need Second Opinion</h4>
                             <p class="post-excerpt">Patient presents with atypical pneumonia symptoms not responding to standard treatment. Chest X-ray shows bilateral infiltrates...</p>
-                            <div class="post-stats">
-                                <span><i class="fas fa-comment"></i> 12 replies</span>
-                                <span><i class="fas fa-eye"></i> 34 views</span>
-                                <span class="tag urgent">Urgent</span>
-                            </div>
+                        <div class="post-stats">
+                            <span><span class="icon-comment"></span> 12 replies</span>
+                            <span><span class="icon-eye"></span> 34 views</span>
+                            <span class="tag urgent">Urgent</span>
+                        </div>
                             <button class="btn btn-small btn-primary" onclick="openForumThread('post1')">View Discussion</button>
                         </div>
                         <div class="forum-post">
-                            <div class="post-author">
-                                <div class="post-avatar">
-                                    <i class="fas fa-user-md"></i>
-                                </div>
-                                <div>
-                                    <span class="author-name">Dr. Michael Chen</span>
-                                    <span class="post-date">Apr 23, 2026 • 2:45 PM</span>
-                                </div>
+                        <div class="post-author">
+                            <div class="post-avatar">
+                                <span class="icon-user-md"></span>
                             </div>
+                            <div>
+                                <span class="author-name">Dr. Michael Chen</span>
+                                <span class="post-date">Apr 23, 2026 • 2:45 PM</span>
+                            </div>
+                        </div>
                             <h4 class="post-title">New Diabetes Treatment Protocol</h4>
                             <p class="post-excerpt">Recent studies show promising results with GLP-1 agonists for Type 2 diabetes management. Would like to discuss implementation...</p>
-                            <div class="post-stats">
-                                <span><i class="fas fa-comment"></i> 8 replies</span>
-                                <span><i class="fas fa-eye"></i> 56 views</span>
-                                <span class="tag">Research</span>
-                            </div>
+                        <div class="post-stats">
+                            <span><span class="icon-comment"></span> 8 replies</span>
+                            <span><span class="icon-eye"></span> 56 views</span>
+                            <span class="tag">Research</span>
+                        </div>
                             <button class="btn btn-small btn-primary" onclick="openForumThread('post2')">View Discussion</button>
                         </div>
                         <div class="forum-post">
-                            <div class="post-author">
-                                <div class="post-avatar">
-                                    <i class="fas fa-user-md"></i>
-                                </div>
-                                <div>
-                                    <span class="author-name">Dr. Emily Williams</span>
-                                    <span class="post-date">Apr 22, 2026 • 11:30 AM</span>
-                                </div>
+                        <div class="post-author">
+                            <div class="post-avatar">
+                                <span class="icon-user-md"></span>
                             </div>
+                            <div>
+                                <span class="author-name">Dr. Emily Williams</span>
+                                <span class="post-date">Apr 22, 2026 • 11:30 AM</span>
+                            </div>
+                        </div>
                             <h4 class="post-title">Pediatric Fever Management Guidelines</h4>
                             <p class="post-excerpt">Updating our department's fever management protocol for children under 5. Looking for input from pediatric specialists...</p>
                             <div class="post-stats">
@@ -539,7 +539,7 @@
                     </div>
                     <div class="new-post-area">
                         <button class="btn btn-primary" onclick="openNewPostForm()">
-                            <i class="fas fa-plus"></i> New Discussion
+                            <span class="icon-plus"></span> New Discussion
                         </button>
                     </div>
                 </div>
@@ -556,26 +556,26 @@
             </div>
             
             <div class="about-grid">
-                <div class="about-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Safe & Secure</h3>
-                    <p>Your health data is protected with enterprise-grade security and encryption.</p>
-                </div>
-                <div class="about-card">
-                    <i class="fas fa-user-md"></i>
-                    <h3>Doctor Verified</h3>
-                    <p>All AI suggestions are reviewed by licensed healthcare professionals.</p>
-                </div>
-                <div class="about-card">
-                    <i class="fas fa-clock"></i>
-                    <h3>24/7 Availability</h3>
-                    <p>Access health information anytime, anywhere without waiting.</p>
-                </div>
-                <div class="about-card">
-                    <i class="fas fa-hand-holding-medical"></i>
-                    <h3>Not a Replacement</h3>
-                    <p>We complement but never replace professional medical care.</p>
-                </div>
+                    <div class="about-card">
+                        <span class="icon-shield-alt"></span>
+                        <h3>Safe & Secure</h3>
+                        <p>Your health data is protected with enterprise-grade security and encryption.</p>
+                    </div>
+                    <div class="about-card">
+                        <span class="icon-user-md"></span>
+                        <h3>Doctor Verified</h3>
+                        <p>All AI suggestions are reviewed by licensed healthcare professionals.</p>
+                    </div>
+                    <div class="about-card">
+                        <span class="icon-clock"></span>
+                        <h3>24/7 Availability</h3>
+                        <p>Access health information anytime, anywhere without waiting.</p>
+                    </div>
+                    <div class="about-card">
+                        <span class="icon-hand-holding-medical"></span>
+                        <h3>Not a Replacement</h3>
+                        <p>We complement but never replace professional medical care.</p>
+                    </div>
             </div>
         </div>
     </section>
@@ -608,7 +608,7 @@
                 </div>
                 <div class="footer-section">
                     <h4>Emergency</h4>
-                    <p class="emergency-note"><i class="fas fa-exclamation-circle"></i> For medical emergencies, call your local emergency services immediately.</p>
+                    <p class="emergency-note"><span class="icon-exclamation-circle"></span> For medical emergencies, call your local emergency services immediately.</p>
                 </div>
             </div>
             <div class="footer-bottom">

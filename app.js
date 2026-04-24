@@ -253,7 +253,7 @@ function displayResults(conditions) {
     if (conditions.length === 0) {
         resultsContainer.innerHTML = `
             <div class="no-results">
-                <i class="fas fa-search"></i>
+                <span class="icon-search"></span>
                 <p>No matching conditions found. Please consult a healthcare professional.</p>
             </div>
         `;
@@ -275,7 +275,7 @@ function displayResults(conditions) {
                 <p class="condition-description">${condition.description}</p>
                 <p class="condition-symptoms"><strong>Matching Symptoms:</strong> ${condition.matchingSymptoms.join(', ').replace(/_/g, ' ')}</p>
                 <div class="condition-recommendation">
-                    <i class="fas fa-info-circle"></i> ${condition.recommendation}
+                    <span class="icon-info-circle"></span> ${condition.recommendation}
                 </div>
             </div>
         `;
@@ -291,7 +291,7 @@ function loadDoctorSuggestions() {
     if (doctorSuggestions.length === 0) {
         suggestionsContainer.innerHTML = `
             <div class="no-suggestions">
-                <i class="fas fa-stethoscope"></i>
+                <span class="icon-stethoscope"></span>
                 <p>Doctor recommendations will appear here after analysis</p>
             </div>
         `;
@@ -304,16 +304,16 @@ function loadDoctorSuggestions() {
             <div class="suggestion-card">
                 <div class="suggestion-header">
                     <div class="suggestion-doctor">
-                        <i class="fas fa-user-md"></i>
+                        <span class="icon-user-md"></span>
                         <span class="suggestion-doctor-name">${suggestion.doctorName}</span>
                     </div>
                     <span class="suggestion-date">${suggestion.date}</span>
                 </div>
                 <h4 class="suggestion-condition">${suggestion.condition}</h4>
                 <p class="suggestion-treatment"><strong>Treatment:</strong> ${suggestion.treatment}</p>
-                <div class="suggestion-notes">
-                    <i class="fas fa-quote-left"></i> ${suggestion.notes}
-                </div>
+                    <div class="suggestion-notes">
+                        <span class="icon-quote-left"></span> ${suggestion.notes}
+                    </div>
                 <span class="suggestion-severity ${suggestion.severity}">${suggestion.severity.toUpperCase()} - ${getSeverityText(suggestion.severity)}</span>
             </div>
         `;
@@ -423,11 +423,11 @@ function showToast(message, type = 'info') {
     const toast = document.createElement('div');
     toast.className = `toast ${type}`;
     
-    const icon = type === 'success' ? 'fa-check-circle' : 
-                 type === 'error' ? 'fa-exclamation-circle' : 
-                 type === 'warning' ? 'fa-exclamation-triangle' : 'fa-info-circle';
+    const icon = type === 'success' ? 'check-circle' : 
+                  type === 'error' ? 'exclamation-circle' : 
+                  type === 'warning' ? 'exclamation-triangle' : 'info-circle';
     
-    toast.innerHTML = `<i class="fas ${icon}"></i> ${message}`;
+            toast.innerHTML = `<span class="icon-${icon}"></span> ${message}`;
     document.body.appendChild(toast);
 
     // Auto remove after 3 seconds
