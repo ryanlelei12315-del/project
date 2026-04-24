@@ -1,0 +1,104 @@
+### REST Client API Testing File
+### Use VS Code "REST Client" extension to test these endpoints directly
+
+@baseUrl = http://localhost:5000/api
+
+### ====================
+### SERVICES
+### ====================
+
+### Get all services
+GET {{baseUrl}}/services
+Accept: application/json
+
+### ====================
+### TESTIMONIALS
+### ====================
+
+### Get all testimonials
+GET {{baseUrl}}/testimonials
+Accept: application/json
+
+###
+
+### Create a new testimonial
+POST {{baseUrl}}/testimonials
+Content-Type: application/json
+
+{
+    "name": "David Ochieng",
+    "message": "Excellent service and very professional staff.",
+    "rating": 5
+}
+
+### ====================
+### PATIENTS
+### ====================
+
+### Get all patients
+GET {{baseUrl}}/patients
+Accept: application/json
+
+###
+
+### Create a new patient
+POST {{baseUrl}}/patients
+Content-Type: application/json
+
+{
+    "name": "Jane Doe",
+    "email": "jane.doe@example.com",
+    "phone": "+254712345678"
+}
+
+### ====================
+### APPOINTMENTS
+### ====================
+
+### Get all appointments
+GET {{baseUrl}}/appointments
+Accept: application/json
+
+###
+
+### Book an appointment (with new patient details)
+POST {{baseUrl}}/appointments
+Content-Type: application/json
+
+{
+    "name": "John Smith",
+    "email": "john.smith@example.com",
+    "phone": "+254789012345",
+    "service": "Cardiology",
+    "date": "2026-05-10",
+    "time": "14:30"
+}
+
+###
+
+### Update appointment status (Replace ID with actual ID)
+PUT {{baseUrl}}/appointments/1
+Content-Type: application/json
+
+{
+    "status": "confirmed"
+}
+
+###
+
+### Delete appointment (Replace ID with actual ID)
+DELETE {{baseUrl}}/appointments/1
+
+### ====================
+### CONTACT INQUIRIES
+### ====================
+
+### Submit a contact message
+POST {{baseUrl}}/contact
+Content-Type: application/json
+
+{
+    "name": "Alice Wonderland",
+    "email": "alice@example.com",
+    "message": "I would like to know more about your pediatric services."
+}

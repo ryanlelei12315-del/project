@@ -1,0 +1,27 @@
+/* App.css - Component specific overrides */
+.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); transition: var(--transition); }
+.navbar.scrolled { border-bottom: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+
+.hero { min-height: 100vh; display: flex; align-items: center; padding-top: 120px; background: linear-gradient(135deg, #f0f7ff 0%, #e8f4f8 50%, #f5f0ff 100%); overflow: hidden; position: relative; }
+
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.service-card { background: #fff; padding: 36px 32px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--border); transition: var(--transition); }
+.service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; background: var(--primary); padding: 60px 0; border-radius: var(--radius-lg); color: #fff; }
+
+.testimonials-carousel { overflow: hidden; position: relative; width: 100%; }
+.testimonials-track { display: flex; transition: transform 0.5s ease; }
+.testimonial-card { min-width: calc(33.333% - 20px); margin: 0 10px; background: var(--bg-alt); padding: 30px; border-radius: var(--radius-lg); }
+
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonial-card { min-width: calc(50% - 20px); }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+}
+
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .testimonial-card { min-width: 100%; margin: 0; }
+  .stats-grid { grid-template-columns: 1fr; }
+}
