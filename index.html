@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthWise - Healthcare Diagnosis Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="icon-heart">♥</span>
+                <span>HealthWise</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#diagnosis">Diagnosis</a></li>
+                <li><a href="#doctors">Doctor Portal</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#messages">Messages</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="icon-bars"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Your Health Companion</h1>
+            <p>AI-powered symptom analysis with expert doctor oversight. Get health insights while always consulting professionals.</p>
+            <div class="hero-buttons">
+                <a href="#diagnosis" class="btn btn-primary">Start Diagnosis</a>
+                <a href="#doctors" class="btn btn-secondary">Doctor Login</a>
+            </div>
+            <div class="disclaimer-banner">
+                <span>⚠</span>
+                <span>This platform provides health information for reference only. Always consult a qualified healthcare professional for medical advice.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagnosis Section -->
+    <section id="diagnosis" class="diagnosis-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Symptom Checker</h2>
+                <p>Select your symptoms to get possible conditions and recommendations</p>
+            </div>
+            
+            <div class="diagnosis-grid">
+                <!-- Symptom Selection -->
+                <div class="symptom-selector">
+                    <h3>Select Your Symptoms</h3>
+                    <div class="symptom-categories">
+                        <div class="symptom-category">
+                            <h4><span>◐</span> General</h4>
+                            <div class="symptom-list">
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="fever">
+                                    <span>Fever</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="fatigue">
+                                    <span>Fatigue</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="headache">
+                                    <span>Headache</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="chills">
+                                    <span>Chills</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="body_ache">
+                                    <span>Body Aches</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="symptom-category">
+                            <h4><span>⬤</span> Respiratory</h4>
+                            <div class="symptom-list">
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="cough">
+                                    <span>Cough</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="shortness_breath">
+                                    <span>Shortness of Breath</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="sore_throat">
+                                    <span>Sore Throat</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="congestion">
+                                    <span>Nasal Congestion</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="wheezing">
+                                    <span>Wheezing</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="symptom-category">
+                            <h4><span>○</span> Digestive</h4>
+                            <div class="symptom-list">
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="nausea">
+                                    <span>Nausea</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="vomiting">
+                                    <span>Vomiting</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="diarrhea">
+                                    <span>Diarrhea</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="abdominal_pain">
+                                    <span>Abdominal Pain</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="loss_of_appetite">
+                                    <span>Loss of Appetite</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="symptom-category">
+                            <h4><span>♥</span> Cardiovascular</h4>
+                            <div class="symptom-list">
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="chest_pain">
+                                    <span>Chest Pain</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="palpitations">
+                                    <span>Heart Palpitations</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="dizziness">
+                                    <span>Dizziness</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="swelling">
+                                    <span>Leg Swelling</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="symptom-category">
+                            <h4><span>◎</span> Neurological</h4>
+                            <div class="symptom-list">
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="confusion">
+                                    <span>Confusion</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="numbness">
+                                    <span>Numbness/Tingling</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="vision_changes">
+                                    <span>Vision Changes</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="seizure">
+                                    <span>Seizures</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="symptom-category">
+                            <h4><span>✦</span> Skin</h4>
+                            <div class="symptom-list">
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="rash">
+                                    <span>Skin Rash</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="itching">
+                                    <span>Itching</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="skin_discoloration">
+                                    <span>Skin Discoloration</span>
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptom" value="hives">
+                                    <span>Hives</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="analyzeBtn" class="btn btn-primary btn-large">
+                        <span>🔍</span> Analyze Symptoms
+                    </button>
+                </div>
+
+                <!-- Results Panel -->
+                <div class="results-panel">
+                    <h3>Possible Conditions</h3>
+                    <div id="resultsContainer" class="results-container">
+                        <div class="no-results">
+                            <i class="fas fa-clipboard-list"></i>
+                            <p>Select your symptoms and click "Analyze Symptoms" to see possible conditions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor Suggestions Area -->
+            <div class="doctor-suggestions-section">
+                <h3><span>⚕</span> Doctor Recommendations</h3>
+                <p>Verified suggestions from healthcare professionals</p>
+                <div id="doctorSuggestions" class="suggestions-grid">
+                    <div class="no-suggestions">
+                        <i class="fas fa-stethoscope"></i>
+                        <p>Doctor recommendations will appear here after analysis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Portal Section -->
+    <section id="doctors" class="doctor-portal-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Doctor Portal</h2>
+                <p>Healthcare professionals can provide diagnoses and suggestions</p>
+            </div>
+
+            <div class="portal-grid">
+                <!-- Login Form -->
+                <div class="doctor-login">
+                    <h3>Doctor Authentication</h3>
+                    <form id="doctorLoginForm">
+                        <div class="form-group">
+                            <label for="doctorId">Doctor ID</label>
+                            <input type="text" id="doctorId" placeholder="Enter your Doctor ID" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="doctorPassword">Password</label>
+                            <input type="password" id="doctorPassword" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </button>
+                        <p class="form-note">For demo, use ID: DOC001 and Password: doctor123</p>
+                    </form>
+                </div>
+
+                <!-- Doctor Dashboard (Hidden by default) -->
+                <div id="doctorDashboard" class="doctor-dashboard hidden">
+                    <div class="dashboard-header">
+                        <h3><i class="fas fa-user-md"></i> Dr. <span id="doctorName">Professional</span></h3>
+                        <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+                    </div>
+                    
+                    <div class="dashboard-tabs">
+                        <button class="tab-btn active" data-tab="pending">Pending Cases</button>
+                        <button class="tab-btn" data-tab="resolved">Resolved Cases</button>
+                        <button class="tab-btn" data-tab="addDiagnosis">Add Diagnosis</button>
+                    </div>
+
+                    <div class="dashboard-content">
+                        <!-- Pending Cases Tab -->
+                        <div id="pendingCases" class="tab-content active">
+                            <div class="cases-list">
+                                <div class="case-card">
+                                    <div class="case-header">
+                                        <span class="case-id">#CASE-001</span>
+                                        <span class="case-date">2026-04-24</span>
+                                    </div>
+                                    <div class="case-symptoms">
+                                        <strong>Symptoms:</strong> Fever, Cough, Shortness of Breath
+                                    </div>
+                                    <div class="case-ai-result">
+                                        <strong>AI Suggestion:</strong> Possible Pneumonia, Bronchitis
+                                    </div>
+                                    <div class="case-actions">
+                                        <button class="btn btn-small btn-primary" onclick="openDiagnosisForm('CASE-001')">
+                                            <i class="fas fa-stethoscope"></i> Provide Diagnosis
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="case-card">
+                                    <div class="case-header">
+                                        <span class="case-id">#CASE-002</span>
+                                        <span class="case-date">2026-04-23</span>
+                                    </div>
+                                    <div class="case-symptoms">
+                                        <strong>Symptoms:</strong> Headache, Fatigue, Nausea
+                                    </div>
+                                    <div class="case-ai-result">
+                                        <strong>AI Suggestion:</strong> Possible Migraine, Tension Headache
+                                    </div>
+                                    <div class="case-actions">
+                                        <button class="btn btn-small btn-primary" onclick="openDiagnosisForm('CASE-002')">
+                                            <i class="fas fa-stethoscope"></i> Provide Diagnosis
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Resolved Cases Tab -->
+                        <div id="resolvedCases" class="tab-content">
+                            <div class="cases-list">
+                                <div class="case-card resolved">
+                                    <div class="case-header">
+                                        <span class="case-id">#CASE-000</span>
+                                        <span class="case-date">2026-04-22</span>
+                                        <span class="case-status resolved">Resolved</span>
+                                    </div>
+                                    <div class="case-symptoms">
+                                        <strong>Symptoms:</strong> Fever, Sore Throat, Swollen Lymph Nodes
+                                    </div>
+                                    <div class="case-doctor-diagnosis">
+                                        <strong>Doctor Diagnosis:</strong> Strep Throat (Streptococcal Pharyngitis)
+                                    </div>
+                                    <div class="case-treatment">
+                                        <strong>Treatment:</strong> Antibiotics (Amoxicillin 500mg 3x daily for 10 days)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add Diagnosis Tab -->
+                        <div id="addDiagnosis" class="tab-content">
+                            <form id="diagnosisForm">
+                                <div class="form-group">
+                                    <label for="caseIdInput">Case ID</label>
+                                    <input type="text" id="caseIdInput" placeholder="Enter case ID" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="diagnosisCondition">Diagnosis Condition</label>
+                                    <input type="text" id="diagnosisCondition" placeholder="Enter diagnosis" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="diagnosisTreatment">Recommended Treatment</label>
+                                    <textarea id="diagnosisTreatment" rows="4" placeholder="Enter treatment recommendations" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="diagnosisNotes">Additional Notes</label>
+                                    <textarea id="diagnosisNotes" rows="3" placeholder="Enter any additional notes for the patient"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="severityLevel">Severity Level</label>
+                                    <select id="severityLevel">
+                                        <option value="low">Low - Manageable at home</option>
+                                        <option value="medium">Medium - Requires consultation</option>
+                                        <option value="high">High - Seek immediate care</option>
+                                        <option value="critical">Critical - Emergency care required</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i> Submit Diagnosis
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Messages Section -->
+    <section id="messages" class="messages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Communication Center</h2>
+                <p>Secure messaging between doctors and patients</p>
+            </div>
+
+            <div class="messages-tabs">
+                <button class="msg-tab-btn active" data-msgtab="doctor-patient">
+                    <i class="fas fa-user-injured"></i> Doctor-Patient
+                </button>
+                <button class="msg-tab-btn" data-msgtab="doctor-doctor">
+                    <i class="fas fa-user-md"></i> Doctor Forum
+                </button>
+            </div>
+
+            <div class="messages-container">
+                <!-- Doctor-Patient Messaging -->
+                <div id="doctorPatientMsgs" class="msg-tab-content active">
+                    <div class="msg-sidebar">
+                        <h4>Conversations</h4>
+                        <div class="conversation-list">
+                            <div class="conversation-item active" data-conversation="patient1">
+                                <div class="conv-avatar">JD</div>
+                                <div class="conv-info">
+                                    <span class="conv-name">John Doe</span>
+                                    <span class="conv-preview">Thank you doctor...</span>
+                                </div>
+                                <span class="conv-time">10:30 AM</span>
+                            </div>
+                            <div class="conversation-item" data-conversation="patient2">
+                                <div class="conv-avatar">AS</div>
+                                <div class="conv-info">
+                                    <span class="conv-name">Alice Smith</span>
+                                    <span class="conv-preview">When should I take...</span>
+                                </div>
+                                <span class="conv-time">Yesterday</span>
+                            </div>
+                            <div class="conversation-item" data-conversation="patient3">
+                                <div class="conv-avatar">RJ</div>
+                                <div class="conv-info">
+                                    <span class="conv-name">Robert Johnson</span>
+                                    <span class="conv-preview">Lab results received...</span>
+                                </div>
+                                <span class="conv-time">Apr 22</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="msg-chat-area">
+                        <div class="chat-header">
+                            <div class="chat-user-info">
+                                <div class="chat-avatar">JD</div>
+                                <div>
+                                    <h4>John Doe</h4>
+                                    <span class="chat-status">Patient • ID: PAT-001</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-small btn-secondary"><i class="fas fa-video"></i> Video Call</button>
+                        </div>
+                        <div class="chat-messages" id="patientChatMessages">
+                            <div class="message received">
+                                <div class="message-content">
+                                    <p>Good morning, Doctor. I wanted to follow up on my diagnosis from last week.</p>
+                                </div>
+                                <span class="message-time">10:15 AM</span>
+                            </div>
+                            <div class="message sent">
+                                <div class="message-content">
+                                    <p>Good morning, John. How are you feeling today? Have you noticed any improvement with the medication?</p>
+                                </div>
+                                <span class="message-time">10:20 AM</span>
+                            </div>
+                            <div class="message received">
+                                <div class="message-content">
+                                    <p>Yes, the fever has gone down but I still have a mild cough. Should I continue the same dosage?</p>
+                                </div>
+                                <span class="message-time">10:25 AM</span>
+                            </div>
+                            <div class="message sent">
+                                <div class="message-content">
+                                    <p>Yes, continue the current dosage for another 5 days. If symptoms persist, please schedule a follow-up appointment.</p>
+                                </div>
+                                <span class="message-time">10:30 AM</span>
+                            </div>
+                        </div>
+                        <div class="chat-input-area">
+                            <button class="attach-btn"><i class="fas fa-paperclip"></i></button>
+                            <input type="text" id="patientMessageInput" placeholder="Type your message...">
+                            <button class="send-btn" onclick="sendPatientMessage()">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor-Doctor Forum -->
+                <div id="doctorDoctorMsgs" class="msg-tab-content">
+                    <div class="forum-header">
+                        <h3><i class="fas fa-stethoscope"></i> Medical Professional Forum</h3>
+                        <p>Discuss cases, share insights, and collaborate with fellow doctors</p>
+                    </div>
+                    <div class="forum-categories">
+                        <button class="forum-cat active">All Topics</button>
+                        <button class="forum-cat">Case Discussions</button>
+                        <button class="forum-cat">Clinical Research</button>
+                        <button class="forum-cat">Treatment Protocols</button>
+                        <button class="forum-cat">Emergency Cases</button>
+                    </div>
+                    <div class="forum-posts">
+                        <div class="forum-post">
+                            <div class="post-author">
+                                <div class="post-avatar">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <div>
+                                    <span class="author-name">Dr. Sarah Johnson</span>
+                                    <span class="post-date">Apr 24, 2026 • 9:15 AM</span>
+                                </div>
+                            </div>
+                            <h4 class="post-title">Unusual Pneumonia Case - Need Second Opinion</h4>
+                            <p class="post-excerpt">Patient presents with atypical pneumonia symptoms not responding to standard treatment. Chest X-ray shows bilateral infiltrates...</p>
+                            <div class="post-stats">
+                                <span><i class="fas fa-comment"></i> 12 replies</span>
+                                <span><i class="fas fa-eye"></i> 34 views</span>
+                                <span class="tag urgent">Urgent</span>
+                            </div>
+                            <button class="btn btn-small btn-primary" onclick="openForumThread('post1')">View Discussion</button>
+                        </div>
+                        <div class="forum-post">
+                            <div class="post-author">
+                                <div class="post-avatar">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <div>
+                                    <span class="author-name">Dr. Michael Chen</span>
+                                    <span class="post-date">Apr 23, 2026 • 2:45 PM</span>
+                                </div>
+                            </div>
+                            <h4 class="post-title">New Diabetes Treatment Protocol</h4>
+                            <p class="post-excerpt">Recent studies show promising results with GLP-1 agonists for Type 2 diabetes management. Would like to discuss implementation...</p>
+                            <div class="post-stats">
+                                <span><i class="fas fa-comment"></i> 8 replies</span>
+                                <span><i class="fas fa-eye"></i> 56 views</span>
+                                <span class="tag">Research</span>
+                            </div>
+                            <button class="btn btn-small btn-primary" onclick="openForumThread('post2')">View Discussion</button>
+                        </div>
+                        <div class="forum-post">
+                            <div class="post-author">
+                                <div class="post-avatar">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <div>
+                                    <span class="author-name">Dr. Emily Williams</span>
+                                    <span class="post-date">Apr 22, 2026 • 11:30 AM</span>
+                                </div>
+                            </div>
+                            <h4 class="post-title">Pediatric Fever Management Guidelines</h4>
+                            <p class="post-excerpt">Updating our department's fever management protocol for children under 5. Looking for input from pediatric specialists...</p>
+                            <div class="post-stats">
+                                <span><i class="fas fa-comment"></i> 15 replies</span>
+                                <span><i class="fas fa-eye"></i> 78 views</span>
+                                <span class="tag">Protocol</span>
+                            </div>
+                            <button class="btn btn-small btn-primary" onclick="openForumThread('post3')">View Discussion</button>
+                        </div>
+                    </div>
+                    <div class="new-post-area">
+                        <button class="btn btn-primary" onclick="openNewPostForm()">
+                            <i class="fas fa-plus"></i> New Discussion
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About HealthWise</h2>
+                <p>Your health companion with professional oversight</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Safe & Secure</h3>
+                    <p>Your health data is protected with enterprise-grade security and encryption.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Doctor Verified</h3>
+                    <p>All AI suggestions are reviewed by licensed healthcare professionals.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7 Availability</h3>
+                    <p>Access health information anytime, anywhere without waiting.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-hand-holding-medical"></i>
+                    <h3>Not a Replacement</h3>
+                    <p>We complement but never replace professional medical care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>HealthWise</h4>
+                    <p>Your trusted healthcare companion with professional doctor oversight.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#diagnosis">Diagnosis</a></li>
+                        <li><a href="#doctors">Doctor Portal</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Important</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergency</h4>
+                    <p class="emergency-note"><i class="fas fa-exclamation-circle"></i> For medical emergencies, call your local emergency services immediately.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HealthWise. All rights reserved. This is not a medical device. Always consult a doctor.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
