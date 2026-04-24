@@ -3,578 +3,369 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthWise - Healthcare Diagnosis Assistant</title>
+    <title>MultiverseCare — Premium Healthcare for Every Stage of Life</title>
+    <meta name="description" content="MultiverseCare Medical Group offers world-class healthcare services with board-certified physicians, cutting-edge technology, and compassionate patient care. Book your appointment today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Sticky Navigation -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <span class="icon-heart">♥</span>
-                <span>HealthWise</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#diagnosis">Diagnosis</a></li>
-                <li><a href="#doctors">Doctor Portal</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#messages">Messages</a></li>
+            <a href="#home" class="logo" id="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <span>Multiverse<strong>Care</strong></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#process" class="nav-link">How It Works</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
             </ul>
-            <div class="nav-toggle">
-                <span class="icon-bars"></span>
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-nav-cta" id="navBookBtn">
+                    <i class="fa-regular fa-calendar-check"></i> Book Appointment
+                </a>
             </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Your Health Companion</h1>
-            <p>AI-powered symptom analysis with expert doctor oversight. Get health insights while always consulting professionals.</p>
-            <div class="hero-buttons">
-                <a href="#diagnosis" class="btn btn-primary">Start Diagnosis</a>
-                <a href="#doctors" class="btn btn-secondary">Doctor Login</a>
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container hero-grid">
+            <div class="hero-content" data-animate="fade-right">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Trusted by 50,000+ Patients Worldwide</span>
+                </div>
+                <h1>Exceptional Healthcare,<br><span class="gradient-text">Delivered With Compassion</span></h1>
+                <p class="hero-subtitle">Experience world-class medical care with our team of board-certified physicians. From preventive wellness to advanced treatments — your health journey starts here.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary btn-lg" id="heroBookBtn">
+                        <i class="fa-regular fa-calendar-check"></i> Book Appointment
+                    </a>
+                    <a href="#services" class="btn btn-outline btn-lg" id="heroExploreBtn">
+                        Explore Services <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="hero-trust-row">
+                    <div class="trust-avatars">
+                        <div class="avatar" style="background: #4A90D9;">Dr</div>
+                        <div class="avatar" style="background: #50C878;">Rn</div>
+                        <div class="avatar" style="background: #E8913A;">Pt</div>
+                        <div class="avatar" style="background: #9B59B6;">Sp</div>
+                    </div>
+                    <div class="trust-text">
+                        <div class="trust-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <span>4.9/5 from 2,400+ reviews</span>
+                    </div>
+                </div>
             </div>
-            <div class="disclaimer-banner">
-                <span>⚠</span>
-                <span>This platform provides health information for reference only. Always consult a qualified healthcare professional for medical advice.</span>
+            <div class="hero-visual" data-animate="fade-left">
+                <div class="hero-image-wrapper">
+                    <img src="assets/hero-doctor.png" alt="MultiverseCare physician providing world-class medical care" class="hero-image" id="heroImage">
+                    <div class="floating-card card-appointment">
+                        <div class="fc-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                        <div class="fc-text">
+                            <strong>Next Available</strong>
+                            <span>Today, 2:30 PM</span>
+                        </div>
+                    </div>
+                    <div class="floating-card card-rating">
+                        <div class="fc-icon"><i class="fa-solid fa-award"></i></div>
+                        <div class="fc-text">
+                            <strong>Top Rated</strong>
+                            <span>98% Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Diagnosis Section -->
-    <section id="diagnosis" class="diagnosis-section">
+    <!-- Trust Bar -->
+    <section class="trust-bar">
         <div class="container">
-            <div class="section-header">
-                <h2>Symptom Checker</h2>
-                <p>Select your symptoms to get possible conditions and recommendations</p>
-            </div>
-            
-            <div class="diagnosis-grid">
-                <!-- Symptom Selection -->
-                <div class="symptom-selector">
-                    <h3>Select Your Symptoms</h3>
-                    <div class="symptom-categories">
-                        <div class="symptom-category">
-                            <h4><span>◐</span> General</h4>
-                            <div class="symptom-list">
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="fever">
-                                    <span>Fever</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="fatigue">
-                                    <span>Fatigue</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="headache">
-                                    <span>Headache</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="chills">
-                                    <span>Chills</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="body_ache">
-                                    <span>Body Aches</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="symptom-category">
-                            <h4><span>⬤</span> Respiratory</h4>
-                            <div class="symptom-list">
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="cough">
-                                    <span>Cough</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="shortness_breath">
-                                    <span>Shortness of Breath</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="sore_throat">
-                                    <span>Sore Throat</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="congestion">
-                                    <span>Nasal Congestion</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="wheezing">
-                                    <span>Wheezing</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="symptom-category">
-                            <h4><span>○</span> Digestive</h4>
-                            <div class="symptom-list">
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="nausea">
-                                    <span>Nausea</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="vomiting">
-                                    <span>Vomiting</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="diarrhea">
-                                    <span>Diarrhea</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="abdominal_pain">
-                                    <span>Abdominal Pain</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="loss_of_appetite">
-                                    <span>Loss of Appetite</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="symptom-category">
-                            <h4><span>♥</span> Cardiovascular</h4>
-                            <div class="symptom-list">
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="chest_pain">
-                                    <span>Chest Pain</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="palpitations">
-                                    <span>Heart Palpitations</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="dizziness">
-                                    <span>Dizziness</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="swelling">
-                                    <span>Leg Swelling</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="symptom-category">
-                            <h4><span>◎</span> Neurological</h4>
-                            <div class="symptom-list">
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="confusion">
-                                    <span>Confusion</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="numbness">
-                                    <span>Numbness/Tingling</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="vision_changes">
-                                    <span>Vision Changes</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="seizure">
-                                    <span>Seizures</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="symptom-category">
-                            <h4><span>✦</span> Skin</h4>
-                            <div class="symptom-list">
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="rash">
-                                    <span>Skin Rash</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="itching">
-                                    <span>Itching</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="skin_discoloration">
-                                    <span>Skin Discoloration</span>
-                                </label>
-                                <label class="symptom-item">
-                                    <input type="checkbox" name="symptom" value="hives">
-                                    <span>Hives</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <button id="analyzeBtn" class="btn btn-primary btn-large">
-                        <span>🔍</span> Analyze Symptoms
-                    </button>
+            <div class="trust-grid">
+                <div class="trust-stat" data-animate="fade-up">
+                    <div class="stat-number" data-count="50000">0</div>
+                    <div class="stat-label">Patients Treated</div>
                 </div>
-
-                <!-- Results Panel -->
-                <div class="results-panel">
-                    <h3>Possible Conditions</h3>
-                    <div id="resultsContainer" class="results-container">
-                        <div class="no-results">
-                            <i class="fas fa-clipboard-list"></i>
-                            <p>Select your symptoms and click "Analyze Symptoms" to see possible conditions</p>
-                        </div>
-                    </div>
+                <div class="trust-divider"></div>
+                <div class="trust-stat" data-animate="fade-up" data-delay="100">
+                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-label">Expert Physicians</div>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-stat" data-animate="fade-up" data-delay="200">
+                    <div class="stat-number" data-count="25">0</div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-stat" data-animate="fade-up" data-delay="300">
+                    <div class="stat-number" data-count="98">0</div>
+                    <div class="stat-label">Patient Satisfaction %</div>
                 </div>
             </div>
-
-            <!-- Doctor Suggestions Area -->
-            <div class="doctor-suggestions-section">
-                <h3><span>⚕</span> Doctor Recommendations</h3>
-                <p>Verified suggestions from healthcare professionals</p>
-                <div id="doctorSuggestions" class="suggestions-grid">
-                    <div class="no-suggestions">
-                        <i class="fas fa-stethoscope"></i>
-                        <p>Doctor recommendations will appear here after analysis</p>
-                    </div>
-                </div>
+            <div class="trust-badges">
+                <div class="badge-item"><i class="fa-solid fa-certificate"></i> JCI Accredited</div>
+                <div class="badge-item"><i class="fa-solid fa-award"></i> ISO 9001 Certified</div>
+                <div class="badge-item"><i class="fa-solid fa-shield-halved"></i> HIPAA Compliant</div>
+                <div class="badge-item"><i class="fa-solid fa-user-doctor"></i> Board Certified MDs</div>
             </div>
         </div>
     </section>
 
-    <!-- Doctor Portal Section -->
-    <section id="doctors" class="doctor-portal-section">
+    <!-- Services Section -->
+    <section id="services" class="services-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Doctor Portal</h2>
-                <p>Healthcare professionals can provide diagnoses and suggestions</p>
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Our Specialties</span>
+                <h2>Comprehensive Medical Services</h2>
+                <p>From routine check-ups to complex procedures, we deliver personalized care across every medical discipline.</p>
             </div>
-
-            <div class="portal-grid">
-                <!-- Login Form -->
-                <div class="doctor-login">
-                    <h3>Doctor Authentication</h3>
-                    <form id="doctorLoginForm">
-                        <div class="form-group">
-                            <label for="doctorId">Doctor ID</label>
-                            <input type="text" id="doctorId" placeholder="Enter your Doctor ID" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="doctorPassword">Password</label>
-                            <input type="password" id="doctorPassword" placeholder="Enter your password" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-sign-in-alt"></i> Login
-                        </button>
-                        <p class="form-note">For demo, use ID: DOC001 and Password: doctor123</p>
-                    </form>
+            <div class="services-grid">
+                <div class="service-card" data-animate="fade-up" id="serviceCardiology">
+                    <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Cardiology</h3>
+                    <p>Advanced cardiac diagnostics, interventional procedures, and heart failure management with state-of-the-art catheterization labs.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-
-                <!-- Doctor Dashboard (Hidden by default) -->
-                <div id="doctorDashboard" class="doctor-dashboard hidden">
-                    <div class="dashboard-header">
-                        <h3><i class="fas fa-user-md"></i> Dr. <span id="doctorName">Professional</span></h3>
-                        <button id="logoutBtn" class="btn btn-secondary">Logout</button>
-                    </div>
-                    
-                    <div class="dashboard-tabs">
-                        <button class="tab-btn active" data-tab="pending">Pending Cases</button>
-                        <button class="tab-btn" data-tab="resolved">Resolved Cases</button>
-                        <button class="tab-btn" data-tab="addDiagnosis">Add Diagnosis</button>
-                    </div>
-
-                    <div class="dashboard-content">
-                        <!-- Pending Cases Tab -->
-                        <div id="pendingCases" class="tab-content active">
-                            <div class="cases-list">
-                                <div class="case-card">
-                                    <div class="case-header">
-                                        <span class="case-id">#CASE-001</span>
-                                        <span class="case-date">2026-04-24</span>
-                                    </div>
-                                    <div class="case-symptoms">
-                                        <strong>Symptoms:</strong> Fever, Cough, Shortness of Breath
-                                    </div>
-                                    <div class="case-ai-result">
-                                        <strong>AI Suggestion:</strong> Possible Pneumonia, Bronchitis
-                                    </div>
-                                    <div class="case-actions">
-                                        <button class="btn btn-small btn-primary" onclick="openDiagnosisForm('CASE-001')">
-                                            <i class="fas fa-stethoscope"></i> Provide Diagnosis
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="case-card">
-                                    <div class="case-header">
-                                        <span class="case-id">#CASE-002</span>
-                                        <span class="case-date">2026-04-23</span>
-                                    </div>
-                                    <div class="case-symptoms">
-                                        <strong>Symptoms:</strong> Headache, Fatigue, Nausea
-                                    </div>
-                                    <div class="case-ai-result">
-                                        <strong>AI Suggestion:</strong> Possible Migraine, Tension Headache
-                                    </div>
-                                    <div class="case-actions">
-                                        <button class="btn btn-small btn-primary" onclick="openDiagnosisForm('CASE-002')">
-                                            <i class="fas fa-stethoscope"></i> Provide Diagnosis
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Resolved Cases Tab -->
-                        <div id="resolvedCases" class="tab-content">
-                            <div class="cases-list">
-                                <div class="case-card resolved">
-                                    <div class="case-header">
-                                        <span class="case-id">#CASE-000</span>
-                                        <span class="case-date">2026-04-22</span>
-                                        <span class="case-status resolved">Resolved</span>
-                                    </div>
-                                    <div class="case-symptoms">
-                                        <strong>Symptoms:</strong> Fever, Sore Throat, Swollen Lymph Nodes
-                                    </div>
-                                    <div class="case-doctor-diagnosis">
-                                        <strong>Doctor Diagnosis:</strong> Strep Throat (Streptococcal Pharyngitis)
-                                    </div>
-                                    <div class="case-treatment">
-                                        <strong>Treatment:</strong> Antibiotics (Amoxicillin 500mg 3x daily for 10 days)
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Add Diagnosis Tab -->
-                        <div id="addDiagnosis" class="tab-content">
-                            <form id="diagnosisForm">
-                                <div class="form-group">
-                                    <label for="caseIdInput">Case ID</label>
-                                    <input type="text" id="caseIdInput" placeholder="Enter case ID" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="diagnosisCondition">Diagnosis Condition</label>
-                                    <input type="text" id="diagnosisCondition" placeholder="Enter diagnosis" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="diagnosisTreatment">Recommended Treatment</label>
-                                    <textarea id="diagnosisTreatment" rows="4" placeholder="Enter treatment recommendations" required></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="diagnosisNotes">Additional Notes</label>
-                                    <textarea id="diagnosisNotes" rows="3" placeholder="Enter any additional notes for the patient"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="severityLevel">Severity Level</label>
-                                    <select id="severityLevel">
-                                        <option value="low">Low - Manageable at home</option>
-                                        <option value="medium">Medium - Requires consultation</option>
-                                        <option value="high">High - Seek immediate care</option>
-                                        <option value="critical">Critical - Emergency care required</option>
-                                    </select>
-                                </div>
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fas fa-save"></i> Submit Diagnosis
-                                </button>
-                            </form>
-                        </div>
-                    </div>
+                <div class="service-card" data-animate="fade-up" data-delay="100" id="serviceNeurology">
+                    <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Neurology</h3>
+                    <p>Expert evaluation and treatment for neurological disorders including stroke, epilepsy, and neurodegenerative conditions.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-animate="fade-up" data-delay="200" id="serviceOrthopedics">
+                    <div class="service-icon"><i class="fa-solid fa-bone"></i></div>
+                    <h3>Orthopedics</h3>
+                    <p>Joint replacement, sports medicine, spinal surgery, and comprehensive musculoskeletal rehabilitation programs.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-animate="fade-up" data-delay="300" id="servicePediatrics">
+                    <div class="service-icon"><i class="fa-solid fa-baby"></i></div>
+                    <h3>Pediatrics</h3>
+                    <p>Compassionate child healthcare from newborn care through adolescence, including vaccinations and developmental assessments.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-animate="fade-up" data-delay="400" id="serviceDermatology">
+                    <div class="service-icon"><i class="fa-solid fa-hand-dots"></i></div>
+                    <h3>Dermatology</h3>
+                    <p>Medical and cosmetic dermatology services including skin cancer screening, acne treatment, and aesthetic procedures.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-animate="fade-up" data-delay="500" id="serviceOncology">
+                    <div class="service-icon"><i class="fa-solid fa-ribbon"></i></div>
+                    <h3>Oncology</h3>
+                    <p>Multidisciplinary cancer care with precision medicine, immunotherapy, and personalized treatment protocols.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Messages Section -->
-    <section id="messages" class="messages-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Communication Center</h2>
-                <p>Secure messaging between doctors and patients</p>
-            </div>
-
-            <div class="messages-tabs">
-                <button class="msg-tab-btn active" data-msgtab="doctor-patient">
-                    <i class="fas fa-user-injured"></i> Doctor-Patient
-                </button>
-                <button class="msg-tab-btn" data-msgtab="doctor-doctor">
-                    <i class="fas fa-user-md"></i> Doctor Forum
-                </button>
-            </div>
-
-            <div class="messages-container">
-                <!-- Doctor-Patient Messaging -->
-                <div id="doctorPatientMsgs" class="msg-tab-content active">
-                    <div class="msg-sidebar">
-                        <h4>Conversations</h4>
-                        <div class="conversation-list">
-                            <div class="conversation-item active" data-conversation="patient1">
-                                <div class="conv-avatar">JD</div>
-                                <div class="conv-info">
-                                    <span class="conv-name">John Doe</span>
-                                    <span class="conv-preview">Thank you doctor...</span>
-                                </div>
-                                <span class="conv-time">10:30 AM</span>
-                            </div>
-                            <div class="conversation-item" data-conversation="patient2">
-                                <div class="conv-avatar">AS</div>
-                                <div class="conv-info">
-                                    <span class="conv-name">Alice Smith</span>
-                                    <span class="conv-preview">When should I take...</span>
-                                </div>
-                                <span class="conv-time">Yesterday</span>
-                            </div>
-                            <div class="conversation-item" data-conversation="patient3">
-                                <div class="conv-avatar">RJ</div>
-                                <div class="conv-info">
-                                    <span class="conv-name">Robert Johnson</span>
-                                    <span class="conv-preview">Lab results received...</span>
-                                </div>
-                                <span class="conv-time">Apr 22</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="msg-chat-area">
-                        <div class="chat-header">
-                            <div class="chat-user-info">
-                                <div class="chat-avatar">JD</div>
-                                <div>
-                                    <h4>John Doe</h4>
-                                    <span class="chat-status">Patient • ID: PAT-001</span>
-                                </div>
-                            </div>
-                            <button class="btn btn-small btn-secondary"><i class="fas fa-video"></i> Video Call</button>
-                        </div>
-                        <div class="chat-messages" id="patientChatMessages">
-                            <div class="message received">
-                                <div class="message-content">
-                                    <p>Good morning, Doctor. I wanted to follow up on my diagnosis from last week.</p>
-                                </div>
-                                <span class="message-time">10:15 AM</span>
-                            </div>
-                            <div class="message sent">
-                                <div class="message-content">
-                                    <p>Good morning, John. How are you feeling today? Have you noticed any improvement with the medication?</p>
-                                </div>
-                                <span class="message-time">10:20 AM</span>
-                            </div>
-                            <div class="message received">
-                                <div class="message-content">
-                                    <p>Yes, the fever has gone down but I still have a mild cough. Should I continue the same dosage?</p>
-                                </div>
-                                <span class="message-time">10:25 AM</span>
-                            </div>
-                            <div class="message sent">
-                                <div class="message-content">
-                                    <p>Yes, continue the current dosage for another 5 days. If symptoms persist, please schedule a follow-up appointment.</p>
-                                </div>
-                                <span class="message-time">10:30 AM</span>
-                            </div>
-                        </div>
-                        <div class="chat-input-area">
-                            <button class="attach-btn"><i class="fas fa-paperclip"></i></button>
-                            <input type="text" id="patientMessageInput" placeholder="Type your message...">
-                            <button class="send-btn" onclick="sendPatientMessage()">
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Doctor-Doctor Forum -->
-                <div id="doctorDoctorMsgs" class="msg-tab-content">
-                    <div class="forum-header">
-                        <h3><i class="fas fa-stethoscope"></i> Medical Professional Forum</h3>
-                        <p>Discuss cases, share insights, and collaborate with fellow doctors</p>
-                    </div>
-                    <div class="forum-categories">
-                        <button class="forum-cat active">All Topics</button>
-                        <button class="forum-cat">Case Discussions</button>
-                        <button class="forum-cat">Clinical Research</button>
-                        <button class="forum-cat">Treatment Protocols</button>
-                        <button class="forum-cat">Emergency Cases</button>
-                    </div>
-                    <div class="forum-posts">
-                        <div class="forum-post">
-                            <div class="post-author">
-                                <div class="post-avatar">
-                                    <i class="fas fa-user-md"></i>
-                                </div>
-                                <div>
-                                    <span class="author-name">Dr. Sarah Johnson</span>
-                                    <span class="post-date">Apr 24, 2026 • 9:15 AM</span>
-                                </div>
-                            </div>
-                            <h4 class="post-title">Unusual Pneumonia Case - Need Second Opinion</h4>
-                            <p class="post-excerpt">Patient presents with atypical pneumonia symptoms not responding to standard treatment. Chest X-ray shows bilateral infiltrates...</p>
-                            <div class="post-stats">
-                                <span><i class="fas fa-comment"></i> 12 replies</span>
-                                <span><i class="fas fa-eye"></i> 34 views</span>
-                                <span class="tag urgent">Urgent</span>
-                            </div>
-                            <button class="btn btn-small btn-primary" onclick="openForumThread('post1')">View Discussion</button>
-                        </div>
-                        <div class="forum-post">
-                            <div class="post-author">
-                                <div class="post-avatar">
-                                    <i class="fas fa-user-md"></i>
-                                </div>
-                                <div>
-                                    <span class="author-name">Dr. Michael Chen</span>
-                                    <span class="post-date">Apr 23, 2026 • 2:45 PM</span>
-                                </div>
-                            </div>
-                            <h4 class="post-title">New Diabetes Treatment Protocol</h4>
-                            <p class="post-excerpt">Recent studies show promising results with GLP-1 agonists for Type 2 diabetes management. Would like to discuss implementation...</p>
-                            <div class="post-stats">
-                                <span><i class="fas fa-comment"></i> 8 replies</span>
-                                <span><i class="fas fa-eye"></i> 56 views</span>
-                                <span class="tag">Research</span>
-                            </div>
-                            <button class="btn btn-small btn-primary" onclick="openForumThread('post2')">View Discussion</button>
-                        </div>
-                        <div class="forum-post">
-                            <div class="post-author">
-                                <div class="post-avatar">
-                                    <i class="fas fa-user-md"></i>
-                                </div>
-                                <div>
-                                    <span class="author-name">Dr. Emily Williams</span>
-                                    <span class="post-date">Apr 22, 2026 • 11:30 AM</span>
-                                </div>
-                            </div>
-                            <h4 class="post-title">Pediatric Fever Management Guidelines</h4>
-                            <p class="post-excerpt">Updating our department's fever management protocol for children under 5. Looking for input from pediatric specialists...</p>
-                            <div class="post-stats">
-                                <span><i class="fas fa-comment"></i> 15 replies</span>
-                                <span><i class="fas fa-eye"></i> 78 views</span>
-                                <span class="tag">Protocol</span>
-                            </div>
-                            <button class="btn btn-small btn-primary" onclick="openForumThread('post3')">View Discussion</button>
-                        </div>
-                    </div>
-                    <div class="new-post-area">
-                        <button class="btn btn-primary" onclick="openNewPostForm()">
-                            <i class="fas fa-plus"></i> New Discussion
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
+    <!-- About / Why Choose Us Section -->
     <section id="about" class="about-section">
         <div class="container">
-            <div class="section-header">
-                <h2>About HealthWise</h2>
-                <p>Your health companion with professional oversight</p>
-            </div>
-            
             <div class="about-grid">
-                <div class="about-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Safe & Secure</h3>
-                    <p>Your health data is protected with enterprise-grade security and encryption.</p>
+                <div class="about-visual" data-animate="fade-right">
+                    <div class="about-image-wrapper">
+                        <img src="assets/about-hospital.png" alt="MultiverseCare modern hospital facility interior" class="about-image" id="aboutImage">
+                        <div class="experience-badge">
+                            <span class="exp-number">25+</span>
+                            <span class="exp-text">Years of<br>Excellence</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-card">
-                    <i class="fas fa-user-md"></i>
-                    <h3>Doctor Verified</h3>
-                    <p>All AI suggestions are reviewed by licensed healthcare professionals.</p>
+                <div class="about-content" data-animate="fade-left">
+                    <span class="section-tag">Why MultiverseCare</span>
+                    <h2>Where Medical Excellence Meets Genuine Compassion</h2>
+                    <p class="about-lead">We believe great healthcare starts with great relationships. Our patient-centered approach combines cutting-edge medicine with the warmth and attention you deserve.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                            <div>
+                                <h4>Expert Medical Team</h4>
+                                <p>150+ board-certified physicians trained at world-renowned institutions with specialized fellowship training.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-microchip"></i></div>
+                            <div>
+                                <h4>Advanced Technology</h4>
+                                <p>Equipped with the latest diagnostic imaging, robotic surgery systems, and AI-assisted diagnostics.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div>
+                                <h4>24/7 Patient Care</h4>
+                                <p>Round-the-clock emergency services and dedicated patient coordinators for seamless care continuity.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-card">
-                    <i class="fas fa-clock"></i>
-                    <h3>24/7 Availability</h3>
-                    <p>Access health information anytime, anywhere without waiting.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">How It Works</span>
+                <h2>Your Care Journey, Simplified</h2>
+                <p>From your first call to full recovery, we make every step effortless.</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-line"></div>
+                <div class="process-step" data-animate="fade-up" id="step1">
+                    <div class="step-number">01</div>
+                    <div class="step-card">
+                        <div class="step-icon"><i class="fa-solid fa-calendar-plus"></i></div>
+                        <h3>Book Your Visit</h3>
+                        <p>Schedule online or call us. Choose your preferred physician, specialty, and time slot that fits your life.</p>
+                    </div>
                 </div>
-                <div class="about-card">
-                    <i class="fas fa-hand-holding-medical"></i>
-                    <h3>Not a Replacement</h3>
-                    <p>We complement but never replace professional medical care.</p>
+                <div class="process-step" data-animate="fade-up" data-delay="150" id="step2">
+                    <div class="step-number">02</div>
+                    <div class="step-card">
+                        <div class="step-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                        <h3>Expert Consultation</h3>
+                        <p>Meet with your specialist for a thorough evaluation. We listen, examine, and craft a personalized care plan.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-animate="fade-up" data-delay="300" id="step3">
+                    <div class="step-number">03</div>
+                    <div class="step-card">
+                        <div class="step-icon"><i class="fa-solid fa-flask-vial"></i></div>
+                        <h3>Diagnostics & Testing</h3>
+                        <p>On-site labs and imaging deliver fast, accurate results — often within hours, not days.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-animate="fade-up" data-delay="450" id="step4">
+                    <div class="step-number">04</div>
+                    <div class="step-card">
+                        <div class="step-icon"><i class="fa-solid fa-hand-holding-medical"></i></div>
+                        <h3>Treatment & Recovery</h3>
+                        <p>Receive evidence-based treatment with continuous follow-up. We're with you every step to full recovery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Patient Stories</span>
+                <h2>What Our Patients Say</h2>
+                <p>Real experiences from real people who trusted us with their health.</p>
+            </div>
+            <div class="testimonials-carousel" id="testimonialCarousel">
+                <div class="testimonials-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <blockquote>"The cardiac team at MultiverseCare saved my life. From the emergency room to rehabilitation, every doctor and nurse treated me like family. I'm forever grateful."</blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: #4A90D9;">JM</div>
+                            <div>
+                                <strong>James Mitchell</strong>
+                                <span>Cardiac Patient • Nairobi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <blockquote>"Dr. Amara's pediatric team is incredible. My son's complex condition was handled with such expertise and compassion. The follow-up care has been outstanding."</blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: #50C878;">SF</div>
+                            <div>
+                                <strong>Sarah Fernandez</strong>
+                                <span>Parent • Mombasa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <blockquote>"After years of knee pain, the orthopedic team gave me my mobility back. The robotic-assisted surgery was minimally invasive and recovery was faster than expected."</blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: #E8913A;">RK</div>
+                            <div>
+                                <strong>Robert Kamau</strong>
+                                <span>Orthopedic Patient • Kisumu</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <blockquote>"The oncology department provided not just treatment, but hope. Their personalized approach and constant support through my chemotherapy journey made all the difference."</blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: #9B59B6;">AN</div>
+                            <div>
+                                <strong>Amina Njeri</strong>
+                                <span>Oncology Patient • Eldoret</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" id="carouselPrev" aria-label="Previous testimonial"><i class="fa-solid fa-chevron-left"></i></button>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                    <button class="carousel-btn next" id="carouselNext" aria-label="Next testimonial"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="cta-bg-shapes">
+            <div class="cta-shape cta-shape-1"></div>
+            <div class="cta-shape cta-shape-2"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content" data-animate="fade-up">
+                <h2>Your Health Can't Wait.<br><span class="gradient-text-light">Neither Should You.</span></h2>
+                <p>Take the first step toward better health. Our team is ready to provide the exceptional care you deserve — book your consultation today.</p>
+                <div class="cta-buttons">
+                    <a href="tel:+254700000000" class="btn btn-white btn-lg" id="ctaCallBtn">
+                        <i class="fa-solid fa-phone"></i> Call +254 700 000 000
+                    </a>
+                    <a href="#" class="btn btn-outline-white btn-lg" id="ctaBookBtn">
+                        <i class="fa-regular fa-calendar-check"></i> Book Online
+                    </a>
+                </div>
+                <div class="cta-reassurance">
+                    <span><i class="fa-solid fa-check"></i> No wait times</span>
+                    <span><i class="fa-solid fa-check"></i> Insurance accepted</span>
+                    <span><i class="fa-solid fa-check"></i> Same-day appointments</span>
                 </div>
             </div>
         </div>
@@ -584,38 +375,75 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>HealthWise</h4>
-                    <p>Your trusted healthcare companion with professional doctor oversight.</p>
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">
+                        <div class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                        <span>Multiverse<strong>Care</strong></span>
+                    </a>
+                    <p>Delivering world-class healthcare with compassion, innovation, and an unwavering commitment to patient outcomes since 2001.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
                 </div>
-                <div class="footer-section">
+                <div class="footer-links-col">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#diagnosis">Diagnosis</a></li>
-                        <li><a href="#doctors">Doctor Portal</a></li>
-                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#process">How It Works</a></li>
+                        <li><a href="#testimonials">Patient Stories</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Important</h4>
+                <div class="footer-links-col">
+                    <h4>Services</h4>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Disclaimer</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#services">Cardiology</a></li>
+                        <li><a href="#services">Neurology</a></li>
+                        <li><a href="#services">Orthopedics</a></li>
+                        <li><a href="#services">Pediatrics</a></li>
+                        <li><a href="#services">Oncology</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Emergency</h4>
-                    <p class="emergency-note"><i class="fas fa-exclamation-circle"></i> For medical emergencies, call your local emergency services immediately.</p>
+                <div class="footer-contact-col">
+                    <h4>Contact Us</h4>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>123 Medical Plaza, Westlands<br>Nairobi, Kenya</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+254 700 000 000</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@multiversecare.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Mon – Sat: 7AM – 9PM<br>Emergency: 24/7</span>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 HealthWise. All rights reserved. This is not a medical device. Always consult a doctor.</p>
+                <p>&copy; 2026 MultiverseCare Medical Group. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/254700000000?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment" class="whatsapp-float" id="whatsappBtn" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us</span>
+    </a>
 
     <script src="app.js"></script>
 </body>
